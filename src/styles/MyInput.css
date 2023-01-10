@@ -1,0 +1,45 @@
+:root {
+  --border-color: #00dfc4;
+}
+
+.inputbox {
+  position: relative;
+  width: 250px;
+}
+.inputbox input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background-color: #1d2b3a;
+  border-radius: 5px;
+  outline: none;
+  color: #fff;
+  font-size: 1em;
+}
+.inputbox span {
+  position: absolute;
+  left: 0;
+  padding: 10px;
+  pointer-events: none;
+  font-size: 1em;
+  color: rgba(255, 255, 255, 0.25);
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+.inputbox input:valid ~ span,
+.inputbox input:focus ~ span {
+  /* color: #00dfc4; */
+  transform: translateX(10px) translateY(-7px);
+  transition: all 0.5s ease-out;
+  font-size: 0.65em;
+  padding: 0 10px;
+  letter-spacing: 0.2em;
+  /* back  */
+  background: var(--border-color);
+  color: #1d2b3a;
+  /* border-radius: 2px; */
+}
+.inputbox input:valid,
+.inputbox input:focus {
+  border: 1px solid var(--border-color);
+}
